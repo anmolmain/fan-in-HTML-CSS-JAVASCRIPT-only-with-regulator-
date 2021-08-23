@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- made by anmol main -->
+    <!-- Student : Punjabi university Patiala -->
+    <!-- B.tech CSE -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fan</title>
+    <style>
+        body,
+        html {
+            background-color: wheat;
+            padding: 0px;
+            margin: 0px;
+        }
+
+        #backside {
+            width: 600px;
+            height: 600px;
+            background-color: indianred;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            left: 50%;
+            top: 60%;
+            border-radius: 50%;
+            overflow: hidden;
+            box-shadow: inset -25px -25px 5px rgb(143, 57, 57);
+
+
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+                transform-origin: center;
+
+            }
+
+            100% {
+                transform: rotate(360deg);
+                transform-origin: center;
+            }
+        }
+
+        #fan {
+            width: 450px;
+            height: 450px;
+            background-color: indianred;
+            position: absolute;
+            animation: rotate linear infinite;
+            /* animation-duration: 1s; */
+            left: 13%;
+            top: 13%;
+            border-radius: 50%;
+        }
+
+        .wing1 {
+            width: 200px;
+            height: 200px;
+            background-color: rgb(4, 161, 161);
+            border-radius: 100px 140px 0;
+            position: absolute;
+            top: 22.5%;
+            left: 23%;
+            transform: translate(-50%, -50%);
+            box-shadow: inset 15px 15px 5px teal;
+
+
+        }
+
+        .wing2 {
+            width: 200px;
+            height: 200px;
+            background-color: rgb(4, 161, 161);
+            border-radius: 100px 140px 0;
+            position: absolute;
+            top: 0%;
+            left: 55%;
+            transform: translate(-50%, -50%);
+            transform: rotate(90deg);
+            box-shadow: inset 15px 15px 5px teal;
+
+
+        }
+
+        .wing3 {
+            width: 200px;
+            height: 200px;
+            background-color: rgb(4, 161, 161);
+            border-radius: 100px 140px 0;
+            position: absolute;
+            top: 55%;
+            left: 55%;
+            transform: translate(-50%, -50%);
+            transform: rotate(180deg);
+            box-shadow: inset 15px 15px 5px teal;
+
+        }
+
+        .wing4 {
+            width: 200px;
+            height: 200px;
+            background-color: rgb(4, 161, 161);
+            border-radius: 100px 140px 0;
+            position: absolute;
+            top: 55%;
+            left: 2%;
+            transform: translate(-50%, -50%);
+            transform: rotate(-90deg);
+            box-shadow: inset 15px 15px 5px teal;
+
+        }
+
+        .circle {
+            width: 180px;
+            height: 180px;
+            background-color: rgb(37, 37, 37);
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: inset -15px -15px 5px black;
+            overflow: hidden;
+            z-index: 2;
+
+        }
+
+        .line1 {
+            width: 2px;
+            height: 650px;
+            background-color: black;
+            position: absolute;
+            top: 50%;
+            left: 49.3%;
+            transform: translate(-50%, -50%);
+        }
+
+        .line2 {
+            width: 2px;
+            height: 650px;
+            transform: rotate(90deg);
+            transform-origin: center;
+            background-color: black;
+            position: absolute;
+            top: -4%;
+            left: 49%;
+        }
+
+        .line3 {
+            width: 2px;
+            height: 650px;
+            transform: rotate(47deg);
+            transform-origin: center;
+            background-color: black;
+            position: absolute;
+            top: -4%;
+            left: 49%;
+        }
+
+        .line4 {
+            width: 2px;
+            height: 650px;
+            transform: rotate(-47deg);
+            transform-origin: center;
+            background-color: black;
+            position: absolute;
+            top: -4%;
+            left: 49%;
+        }
+
+        .line5 {
+            width: 2px;
+            height: 650px;
+            transform: rotate(25deg);
+            transform-origin: center;
+            background-color: black;
+            position: absolute;
+            top: -4%;
+            left: 49%;
+        }
+
+        .line6 {
+            width: 2px;
+            height: 650px;
+            transform: rotate(-25deg);
+            transform-origin: center;
+            background-color: black;
+            position: absolute;
+            top: -4%;
+            left: 49%;
+        }
+
+        .line7 {
+            width: 2px;
+            height: 650px;
+            transform: rotate(110deg);
+            transform-origin: center;
+            background-color: black;
+            position: absolute;
+            top: -4%;
+            left: 49%;
+        }
+
+        .line8 {
+            width: 2px;
+            height: 650px;
+            transform: rotate(-110deg);
+            transform-origin: center;
+            background-color: black;
+            position: absolute;
+            top: -4%;
+            left: 49%;
+        }
+
+        .line9 {
+            width: 2px;
+            height: 650px;
+            transform: rotate(12deg);
+            transform-origin: center;
+            background-color: black;
+            position: absolute;
+            top: -4%;
+            left: 49%;
+        }
+
+        .line10 {
+            width: 2px;
+            height: 650px;
+            transform: rotate(-10deg);
+            transform-origin: center;
+            background-color: black;
+            position: absolute;
+            top: -4%;
+            left: 49%;
+        }
+
+        .line11 {
+            width: 2px;
+            height: 650px;
+            transform: rotate(-37deg);
+            transform-origin: center;
+            background-color: black;
+            position: absolute;
+            top: -4%;
+            left: 49%;
+        }
+
+        .line12 {
+            width: 2px;
+            height: 650px;
+            transform: rotate(37deg);
+            transform-origin: center;
+            background-color: black;
+            position: absolute;
+            top: -4%;
+            left: 49%;
+        }
+
+        .line13 {
+            width: 2px;
+            height: 650px;
+            transform: rotate(57deg);
+            transform-origin: center;
+            background-color: black;
+            position: absolute;
+            top: -4%;
+            left: 49%;
+        }
+
+        .line13 {
+            width: 2px;
+            height: 650px;
+            transform: rotate(-57deg);
+            transform-origin: center;
+            background-color: black;
+            position: absolute;
+            top: -4%;
+            left: 49%;
+        }
+
+        .line14 {
+            width: 2px;
+            height: 650px;
+            transform: rotate(58deg);
+            transform-origin: center;
+            background-color: black;
+            position: absolute;
+            top: -4%;
+            left: 49%;
+        }
+
+        .line15 {
+            width: 2px;
+            height: 650px;
+            transform: rotate(-100deg);
+            transform-origin: center;
+            background-color: black;
+            position: absolute;
+            top: -4%;
+            left: 49%;
+        }
+
+        .line16 {
+            width: 2px;
+            height: 650px;
+            transform: rotate(100deg);
+            transform-origin: center;
+            background-color: black;
+            position: absolute;
+            top: -4%;
+            left: 49%;
+        }
+
+        .cir {
+            width: 200px;
+            height: 200px;
+            background-color: rgb(37, 37, 37);
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: inset -15px -15px 5px black;
+            overflow: hidden;
+            z-index: 2;
+
+        }
+
+        #regulator {
+            width: 750px;
+            height: 100px;
+            background-color: teal;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            left: 50%;
+            top: 10%;
+            padding: 15px;
+        }
+
+        .btn {
+            transition: 0.3s;
+            width: 90px;
+            height: 90px;
+            background-color: rgb(218, 125, 125);
+            border-radius: 50%;
+            outline: none;
+            box-shadow: inset -8px -8px 5px rgb(194, 82, 82);
+            font-size: 55px;
+            font-weight: 800;
+        }
+
+        .btn:hover {
+            transition: 0.3s;
+            width: 90px;
+            height: 90px;
+            background-color: indianred;
+            border-radius: 50%;
+            outline: none;
+            box-shadow: inset -8px -8px 5px rgb(148, 16, 16);
+            font-size: 55px;
+            font-weight: 800;
+        }
+
+        .whole {
+            display: flex;
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+    <div id="regulator">
+        <input type="button" value="0F" class="btn" onclick="off()" id="of">
+        <input type="button" value="1" class="btn" onclick="one()" id="one">
+        <input type="button" value="2" class="btn" onclick="two()" id="two">
+        <input type="button" value="3" class="btn" onclick="three()" id="three">
+        <input type="button" value="4" class="btn" onclick="four()" id="four">
+        <input type="button" value="5" class="btn" onclick="five()" id="five">
+        <input type="button" value="6" class="btn" onclick="six()" id="six">
+        <input type="button" value="7" class="btn" onclick="seven()" id="seven">
+    </div>
+    <div id="backside">
+        <div id="fan">
+            <div class="circle"></div>
+            <div class="wing1"></div>
+            <div class="wing2"></div>
+            <div class="wing3"></div>
+            <div class="wing4"></div>
+        </div>
+        <div class="liness">
+
+            <div class="cir"></div>
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+            <div class="line4"></div>
+            <div class="line5"></div>
+            <div class="line6"></div>
+            <div class="line7"></div>
+            <div class="line8"></div>
+            <div class="line9"></div>
+            <div class="line10"></div>
+            <div class="line11"></div>
+            <div class="line12"></div>
+            <div class="line13"></div>
+            <div class="line14"></div>
+            <div class="line15"></div>
+            <div class="line16"></div>
+        </div>
+
+        <script>
+            // function fun() {
+            //     document.getElementById("fan").style.animationDuration = "10s";
+            // }
+            function one() {
+                document.getElementById("fan").style.animationDuration = "3s"
+            }
+            function two() {
+                document.getElementById("fan").style.animationDuration = "2s"
+            }
+            function three() {
+                document.getElementById("fan").style.animationDuration = "0.8s"
+            }
+            function four() {
+                document.getElementById("fan").style.animationDuration = "0.6s"
+            }
+            function five() {
+                document.getElementById("fan").style.animationDuration = "0.4s"
+            }
+            function six() {
+                document.getElementById("fan").style.animationDuration = "0.3s"
+            }
+            function seven() {
+                document.getElementById("fan").style.animationDuration = "0.1s"
+            }
+            function off() {
+                document.getElementById("fan").style.animationDuration = "0s"
+            }
+        </script>
+</body>
+
+</html>
